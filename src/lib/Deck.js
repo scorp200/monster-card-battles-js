@@ -1,11 +1,3 @@
-function Deck(src_array) {
-	var t = this;
-	var cards = [];
-	for (var i = 0; i < src_array.length; i++) {
-		cards.push(new Card(src_array[i]));
-	}
-}
-
 var Decks = (function() {
 	function createDeck(name_array) {
 		var deck = [];
