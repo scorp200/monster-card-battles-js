@@ -45,6 +45,20 @@ function clamp(value, min, max) {
 	return value > max ? max : value < min ? min : value;
 }
 
+function shuffleArray(array) {
+	var currentIndex = array.length;
+	var tempValue;
+	var randomIndex;
+	while (0 !== currentIndex) {
+		randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex--;
+		tempValue = array[currentIndex];
+		array[currentIndex] = array[randomIndex];
+		array[randomIndex] = tempValue;
+	}
+	return array;
+}
+
 /**
  *
  */

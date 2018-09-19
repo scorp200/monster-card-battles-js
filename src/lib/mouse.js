@@ -5,7 +5,6 @@ var Mouse = (function() {
 	var y = 0;
 	var vx = 0;
 	var vy = 0;
-	var scrollDir = 0;
 	var click = false;
 	var released = false;
 	var down = false;
@@ -69,11 +68,6 @@ var Mouse = (function() {
 	}, false);
 
 	//
-	window.addEventListener("wheel", function(e) {
-		scrollDir = Math.sign(e.deltaY);
-	}, false);
-
-	//
 	return {
 		update: update,
 		overRegion: overRegion,
@@ -84,8 +78,7 @@ var Mouse = (function() {
 		get vy() { return vy; },
 		get click() { return click; },
 		get released() { return released; },
-		get down() { return down; },
-		get scrollDir() { return scrollDir; }
+		get down() { return down; }
 	}
 
 })();
